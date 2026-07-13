@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Waleed Gaming Withdraw</title>
+
+<style>
+body{
+    font-family:Arial;
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+.box{
+    width:320px;
+    margin:40px auto;
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:8px;
+}
+
+button{
+    width:90%;
+    padding:10px;
+    background:#ff8800;
+    color:white;
+    border:none;
+    border-radius:5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>Waleed Gaming</h2>
+
+<h3>Withdraw</h3>
+
+<input type="number" placeholder="Enter Amount">
+
+<input type="text" placeholder="EasyPaisa / JazzCash Number">
+
+<input type="text" placeholder="Account Name">
+
+<button>Submit Withdraw Request</button>
+
+</div>
+
+</body>
+</html>
