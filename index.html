@@ -1,21 +1,17 @@
-<a href="register.html">
-<button>Create Account</button>
-</a>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-body{
-    margin:0;
-    padding:0;
-    background:#111;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    font-family:Arial,sans-serif;
-}
+<div class="guest-box">
 
-.box{
-    width:95%;
-    max-width:420px;
-    padding:25px;
-    border-radius:15px;
-}
+<h2>Guest Registration</h2>
+
+<input type="text" id="fullname" placeholder="Full Name">
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<input type="number" id="age" placeholder="Age">
+
+<button onclick="guestRegister()">Create Guest Account</button>
+
+</div>
