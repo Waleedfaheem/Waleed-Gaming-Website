@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ban Manager</title>
+
+<link rel="stylesheet" href="ban-manager.css">
+
+</head>
+
+
+<body>
+
+
+<div class="ban-box">
+
+
+<h1>🛡️ Ban Manager</h1>
+
+
+<input 
+type="text" 
+id="userId"
+placeholder="Enter User ID">
+
+
+<input 
+type="text" 
+id="banReason"
+placeholder="Ban Reason">
+
+
+<button onclick="banUser()">
+🚫 Ban User
+</button>
+
+
+
+<h2>Banned Users</h2>
+
+
+<div id="banList">
+
+</div>
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="ban-manager.js"></script>
+
+
+</body>
+
+</html>
