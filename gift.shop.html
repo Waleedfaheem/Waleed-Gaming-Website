@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom Gift Shop</title>
+
+<link rel="stylesheet" href="gift-shop.css">
+
+</head>
+
+
+<body>
+
+
+<div class="gift-container">
+
+
+<h1>🎁 StarRoom Gift Shop</h1>
+
+
+<div class="coin-box">
+
+🪙 Your Coins:
+<span id="giftCoins">0</span>
+
+</div>
+
+
+
+<div class="gift-list">
+
+
+<div class="gift-card">
+
+<div class="gift-icon">
+🌹
+</div>
+
+<h3>Flower</h3>
+
+<p>20 Coins</p>
+
+<button onclick="sendGift('Flower',20)">
+Send
+</button>
+
+</div>
+
+
+
+
+<div class="gift-card">
+
+<div class="gift-icon">
+❤️
+</div>
+
+<h3>Heart</h3>
+
+<p>100 Coins</p>
+
+<button onclick="sendGift('Heart',100)">
+Send
+</button>
+
+</div>
+
+
+
+
+
+<div class="gift-card">
+
+<div class="gift-icon">
+💎
+</div>
+
+<h3>Diamond</h3>
+
+<p>500 Coins</p>
+
+<button onclick="sendGift('Diamond',500)">
+Send
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="gift-shop.js"></script>
+
+
+</body>
+
+</html>
