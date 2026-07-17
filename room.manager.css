@@ -1,0 +1,41 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+min-height:100vh;
+padding:20px;
+color:#fff;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+h1,h2{
+text-align:center;
+margin:20px 0;
+}
+
+.create-room{
+background:rgba(255,255,255,.10);
+backdrop-filter:blur(15px);
+padding:20px;
+border-radius:20px;
+display:grid;
+gap:15px;
+margin-bottom:30px;
+}
+
+.create-room input,
+.create-room select{
+padding:15px;
+border:none;
+border-radius:12px;
+font-size:16px;
+outline
