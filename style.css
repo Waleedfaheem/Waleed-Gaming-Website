@@ -1,116 +1,111 @@
+/* ===========================
+   STARROOM PREMIUM CSS
+   PART 1
+=========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
-background-size:400% 400%;
-animation:bgMove 10s infinite alternate;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0b0b0b;
+    overflow:hidden;
 }
 
-@keyframes bgMove{
-0%{background-position:left;}
-100%{background-position:right;}
+.background{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(135deg,#111,#000,#1a1a1a);
+    z-index:-1;
 }
 
-.guest-box{
-width:92%;
-max-width:420px;
-padding:30px;
-border-radius:25px;
-background:rgba(255,255,255,0.12);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.25);
-box-shadow:0 15px 40px rgba(0,0,0,.45);
-}
+.login-box{
 
-.guest-box h2{
-color:#fff;
-text-align:center;
-margin-bottom:20px;
-font-size:32px;
-text-shadow:0 0 12px #00e5ff;
-}
+    width:380px;
+    background:#161616;
 
-.guest-box input{
-width:100%;
-padding:15px;
-margin:10px 0;
-border:none;
-outline:none;
-border-radius:15px;
-background:rgba(255,255,255,.18);
-color:#fff;
-font-size:16px;
-box-shadow:inset 0 2px 8px rgba(0,0,0,.35);
-}
+    border:2px solid gold;
 
-.guest-box input::placeholder{
-color:#ddd;
-}
+    border-radius:20px;
 
-.guest-box button{
-width:100%;
-padding:16px;
-margin-top:18px;
-border:none;
-border-radius:18px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-color:#fff;
-background:linear-gradient(90deg,#00c6ff,#7c3aed);
-box-shadow:0 10px 25px rgba(0,198,255,.45);
-transition:.3s;
-}
+    padding:30px;
 
-.guest-box button:hover{
-transform:translateY(-3px) scale(1.03);
-box-shadow:0 15px 30px rgba(124,58,237,.6);
-}
-/* Splash Screen */
+    box-shadow:
+    0 0 20px gold;
 
-#splash{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#0b1120;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:9999;
-transition:.5s;
 }
 
 .logo{
-font-size:42px;
-font-weight:bold;
-color:#ffffff;
-text-shadow:0 0 20px #00e5ff;
-margin-bottom:30px;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
 }
 
-.loader{
-width:70px;
-height:70px;
-border:6px solid rgba(255,255,255,.2);
-border-top:6px solid #00e5ff;
-border-radius:50%;
-animation:spin 1s linear infinite;
+.logo img{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
 }
 
-@keyframes spin{
-100%{
-transform:rotate(360deg);
+.logo h1{
+
+    color:#FFD700;
+
+    font-size:32px;
+
+    margin-top:10px;
+
 }
+
+.logo p{
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.input-box{
+
+    margin-top:20px;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    height:50px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    padding-left:15px;
+
+    font-size:16px;
+
+    background:#2a2a2a;
+
+    color:white;
+
 }
