@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom</title>
+
+<link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="login-box">
+
+<div class="logo">
+⭐
+</div>
+
+<h1>StarRoom</h1>
+
+<p>Live • Chat • Party</p>
+
+<input
+type="email"
+id="email"
+placeholder="📧 Enter Email">
+
+<input
+type="password"
+id="password"
+placeholder="🔒 Enter Password">
+
+<button class="login-btn" onclick="loginUser()">
+Login
+</button>
+
+<div class="divider">
+OR
+</div>
+
+<button class="google-btn">
+🔵 Continue with Google
+</button>
+
+<button class="phone-btn">
+📱 Continue with Phone
+</button>
+
+<button class="guest-btn" onclick="guestLogin()">
+👤 Continue as Guest
+</button>
+
+<p class="signup">
+Don't have an account?
+
+<a href="register.html">
+
+Create Account
+
+</a>
+
+</p>
+
+</div>
+
+<script src="firebase.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>
