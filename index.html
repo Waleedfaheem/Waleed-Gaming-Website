@@ -11,13 +11,19 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="container">
+<div class="bg"></div>
+
+<div class="login-container">
 
 <div class="login-card">
 
@@ -25,13 +31,13 @@
 
 <h1>StarRoom</h1>
 
-<p class="subtitle">
+<p class="welcome">
 Welcome Back
 </p>
 
 <form id="loginForm">
 
-<div class="input-group">
+<div class="input-box">
 
 <input
 type="email"
@@ -41,7 +47,7 @@ required>
 
 </div>
 
-<div class="input-group">
+<div class="input-box">
 
 <input
 type="password"
@@ -58,6 +64,7 @@ type="submit">
 LOGIN
 
 </button>
+
 <div class="divider">
 
 <span>OR</span>
@@ -66,10 +73,9 @@ LOGIN
 
 <button
 type="button"
-class="google-btn"
-id="googleLogin">
+class="google-btn">
 
-<img src="google.png" alt="Google">
+<img src="google.png">
 
 Continue with Google
 
@@ -77,16 +83,15 @@ Continue with Google
 
 <button
 type="button"
-class="facebook-btn"
-id="facebookLogin">
+class="facebook-btn">
 
-<img src="facebook.png" alt="Facebook">
+<img src="facebook.png">
 
 Continue with Facebook
 
 </button>
 
-<div class="bottom-text">
+<p class="register">
 
 Don't have an account?
 
@@ -96,26 +101,13 @@ Register
 
 </a>
 
-</div>
+</p>
 
 </form>
 
 </div>
 
 </div>
-<div class="version">
-
-<p>StarRoom v1.0</p>
-
-</div>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-
-<script src="firebase.js"></script>
 
 <script src="script.js"></script>
 
