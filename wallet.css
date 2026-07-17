@@ -1,0 +1,80 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+color:#fff;
+}
+
+.wallet-box{
+width:90%;
+max-width:420px;
+padding:30px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+text-align:center;
+}
+
+.wallet-box h1{
+margin-bottom:20px;
+}
+
+.balance{
+background:rgba(255,255,255,.10);
+padding:25px;
+border-radius:20px;
+margin-bottom:25px;
+}
+
+.balance h2{
+font-size:45px;
+color:#FFD700;
+}
+
+.buttons{
+display:grid;
+gap:15px;
+}
+
+.buttons button{
+padding:15px;
+border:none;
+border-radius:15px;
+background:linear-gradient(90deg,#00c6ff,#7c3aed);
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.buttons button:hover{
+transform:scale(1.05);
+}
+
+.transactions{
+margin-top:25px;
+background:rgba(255,255,255,.08);
+padding:15px;
+border-radius:15px;
+}
+
+.transactions ul{
+list-style:none;
+margin-top:10px;
+}
+
+.transactions li{
+padding:10px;
+border-bottom:1px solid rgba(255,255,255,.15);
+}
