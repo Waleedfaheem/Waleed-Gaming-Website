@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom Voice Room</title>
+
+<link rel="stylesheet" href="voice_room.css">
+
+</head>
+
+
+<body>
+
+
+<div class="room-box">
+
+
+<div class="room-header">
+
+<h1>🎤 StarRoom Live</h1>
+
+<p id="roomName">
+🔥 Welcome Room
+</p>
+
+</div>
+
+
+
+<div class="host-area">
+
+
+<div class="seat host">
+
+<div class="avatar">
+👑
+</div>
+
+<h3>Host</h3>
+
+<button onclick="toggleMic()">
+🎤 Mic
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<div class="seats">
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 2</p>
+</div>
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 3</p>
+</div>
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 4</p>
+</div>
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 5</p>
+</div>
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 6</p>
+</div>
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 7</p>
+</div>
+
+
+<div class="seat">
+<div class="avatar">
+👤
+</div>
+<p>Seat 8</p>
+</div>
+
+
+</div>
+
+
+
+<div class="actions">
+
+
+<button onclick="sendGift()">
+🎁 Gift
+</button>
+
+
+<button onclick="openChat()">
+💬 Chat
+</button>
+
+
+<button onclick="leaveRoom()">
+🚪 Leave
+</button>
+
+
+</div>
+
+
+
+<div id="chatBox">
+
+</div>
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="voice_room.js"></script>
+
+
+</body>
+
+</html>
