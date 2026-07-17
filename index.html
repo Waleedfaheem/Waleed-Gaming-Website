@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>StarRoom</title>
 
-<link rel="stylesheet" href="style.css">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="bg"></div>
+<div class="background">
 
-<div class="login-container">
+<div class="overlay"></div>
 
-<div class="login-card">
+</div>
+
+<div class="login-page">
+
+<div class="login-box">
+
+<div class="logo-box">
 
 <img src="logo.png" class="logo">
 
 <h1>StarRoom</h1>
 
-<p class="welcome">
-Welcome Back
-</p>
+<p>Play • Win • Repeat</p>
+
+</div>
 
 <form id="loginForm">
 
@@ -64,7 +64,6 @@ type="submit">
 LOGIN
 
 </button>
-
 <div class="divider">
 
 <span>OR</span>
@@ -73,41 +72,70 @@ LOGIN
 
 <button
 type="button"
+id="googleLogin"
 class="google-btn">
 
 <img src="google.png">
 
-Continue with Google
+<span>Continue with Google</span>
 
 </button>
 
 <button
 type="button"
+id="facebookLogin"
 class="facebook-btn">
 
 <img src="facebook.png">
 
-Continue with Facebook
+<span>Continue with Facebook</span>
 
 </button>
 
-<p class="register">
+<div class="forgot-password">
 
-Don't have an account?
+<a href="#">
 
-<a href="register.html">
-
-Register
+Forgot Password?
 
 </a>
 
-</p>
+</div>
 
+<div class="register-link">
+
+<span>
+
+Don't have an account?
+
+</span>
+
+<a href="register.html">
+
+Register Now
+
+</a>
+
+</div>
+
+<div class="version">
+
+Version 1.0
+
+</div>
 </form>
 
 </div>
 
 </div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+<script src="firebase.js"></script>
 
 <script src="script.js"></script>
 
