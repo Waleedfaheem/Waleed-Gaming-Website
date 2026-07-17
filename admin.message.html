@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom Admin Message</title>
+
+<link rel="stylesheet" href="admin-message.css">
+
+</head>
+
+
+<body>
+
+
+<div class="admin-container">
+
+
+<h1>👑 Admin Notification Manager</h1>
+
+
+
+<input 
+type="text"
+id="notificationTitle"
+placeholder="Notification Title">
+
+
+
+<textarea 
+id="notificationMessage"
+placeholder="Write Message">
+</textarea>
+
+
+
+<button onclick="sendNotification()">
+
+🔔 Send Notification
+
+</button>
+
+
+
+<div id="status">
+
+</div>
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="admin-message.js"></script>
+
+
+</body>
+
+</html>
+<script src="admin-auth.js"></script>
