@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom Gifts</title>
+
+<link rel="stylesheet" href="gift.css">
+
+</head>
+
+
+<body>
+
+
+<div class="gift-box">
+
+
+<h1>⭐ StarRoom</h1>
+
+<h2>🎁 Send Gifts</h2>
+
+
+<div class="gift-card">
+
+<h3>🌹 Rose</h3>
+
+<p>Price: 🪙 10 Coins</p>
+
+<button onclick="sendGift('Rose',10)">
+Send
+</button>
+
+</div>
+
+
+
+<div class="gift-card">
+
+<h3>💎 Diamond</h3>
+
+<p>Price: 🪙 100 Coins</p>
+
+<button onclick="sendGift('Diamond',100)">
+Send
+</button>
+
+</div>
+
+
+
+<div class="gift-card">
+
+<h3>👑 Crown</h3>
+
+<p>Price: 🪙 500 Coins</p>
+
+<button onclick="sendGift('Crown',500)">
+Send
+</button>
+
+</div>
+
+
+
+<p>
+Your Coins:
+<span id="coins">800</span>
+</p>
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="database.js"></script>
+<script src="gift.js"></script>
+
+
+</body>
+
+</html>
