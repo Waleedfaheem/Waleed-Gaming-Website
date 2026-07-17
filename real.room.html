@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom Live Room</title>
+
+<link rel="stylesheet" href="real-room.css">
+
+</head>
+
+
+<body>
+
+
+<div class="room-container">
+
+
+<h1>🎤 StarRoom Live Room</h1>
+
+
+<div class="room-card">
+
+
+<h2 id="roomName">
+🔥 Welcome Room
+</h2>
+
+
+<p>
+👥 Online:
+<span id="onlineCount">0</span>
+</p>
+
+
+</div>
+
+
+
+<div class="seats" id="seats">
+
+
+<div class="seat host">
+
+<div class="avatar">
+👑
+</div>
+
+<p>
+Host
+</p>
+
+</div>
+
+
+
+<div class="seat">
+
+<div class="avatar">
+👤
+</div>
+
+<p>
+Seat 2
+</p>
+
+</div>
+
+
+
+<div class="seat">
+
+<div class="avatar">
+👤
+</div>
+
+<p>
+Seat 3
+</p>
+
+</div>
+
+
+
+<div class="seat">
+
+<div class="avatar">
+👤
+</div>
+
+<p>
+Seat 4
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="controls">
+
+
+<button onclick="joinRoom()">
+
+🎤 Join
+
+</button>
+
+
+<button onclick="joinVoice()">
+🎤 Join Voice
+</button>
+
+
+<button onclick="micControl()">
+🎙️ Mic ON/OFF
+</button>
+
+
+<button onclick="leaveVoice()">
+🚪 Leave Voice
+</button>
+
+</button>
+
+
+
+<button onclick="leaveRoom()">
+
+🚪 Leave
+
+</button>
+
+
+</div>
+
+
+
+<div class="chat-area">
+
+<h3>
+💬 Room Chat
+</h3>
+
+<div id="roomChat">
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="real-room.js"></script>
+
+
+</body>
+
+</html>
+<script src="webrtc-voice.js"></script>
+<script src="voice-signal.js"></script>
+<script src="firebase.js"></script>
+<script src="voice-config.js"></script>
+<script src="webrtc-voice.js"></script>
+<script src="voice-signal.js"></script>
+<script src="real-room.js"></script>
