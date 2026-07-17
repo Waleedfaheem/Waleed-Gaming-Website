@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StarRoom Admin Dashboard</title>
+
+<link rel="stylesheet" href="admin-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="admin-dashboard">
+
+
+<h1>👑 StarRoom Admin Panel</h1>
+
+
+
+<div class="admin-cards">
+
+
+<div class="admin-card">
+
+<h2 id="totalUsers">
+0
+</h2>
+
+<p>
+👥 Total Users
+</p>
+
+</div>
+
+
+
+<div class="admin-card">
+
+<h2 id="totalCoins">
+0
+</h2>
+
+<p>
+🪙 Total Coins
+</p>
+
+</div>
+
+
+
+
+<div class="admin-card">
+
+<h2 id="totalPoints">
+0
+</h2>
+
+<p>
+🟡 Yellow Points
+</p>
+
+</div>
+
+
+
+<div class="admin-card">
+
+<h2 id="totalWithdraw">
+0
+</h2>
+
+<p>
+💸 Withdraw Requests
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="admin-menu">
+
+
+<button onclick="openUsers()">
+👥 Users
+</button>
+
+
+<button onclick="openWithdraw()">
+💸 Withdraw
+</button>
+
+
+<button onclick="openCoins()">
+🪙 Coins Control
+</button>
+
+
+<button onclick="openGifts()">
+🎁 Gifts
+</button>
+
+
+<button onclick="openVIP()">
+👑 VIP
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="admin-dashboard.js"></script>
+
+
+</body>
+<script src="admin-auth.js"></script>
+
+</html>
