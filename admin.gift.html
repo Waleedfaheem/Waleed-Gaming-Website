@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Gift Manager</title>
+
+<link rel="stylesheet" href="admin-gifts.css">
+
+</head>
+
+
+<body>
+
+
+<div class="gift-container">
+
+
+<h1>🎁 Admin Gift Manager</h1>
+
+
+
+<input 
+id="giftName"
+placeholder="Gift Name">
+
+
+
+<input 
+id="giftPrice"
+type="number"
+placeholder="Gift Price Coins">
+
+
+
+<input 
+id="giftImage"
+placeholder="Gift Image URL">
+
+
+
+<button onclick="addGift()">
+
+➕ Add Gift
+
+</button>
+
+
+
+<h2>Gift List</h2>
+
+
+
+<div id="giftList">
+
+Loading Gifts...
+
+</div>
+
+
+
+</div>
+
+
+
+<script src="firebase.js"></script>
+<script src="admin-gifts.js"></script>
+
+
+</body>
+
+</html>
+<script src="admin-auth.js"></script>
