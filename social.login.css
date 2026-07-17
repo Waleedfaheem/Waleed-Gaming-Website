@@ -1,0 +1,119 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(135deg,#020617,#1d4ed8,#7c3aed);
+
+color:white;
+padding:20px;
+
+}
+
+
+.social-box{
+
+width:90%;
+max-width:420px;
+
+padding:35px;
+
+background:rgba(255,255,255,0.12);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+
+text-align:center;
+
+}
+
+
+.social-box h1{
+
+font-size:38px;
+
+color:#FFD700;
+
+margin-bottom:15px;
+
+}
+
+
+.social-box h2{
+
+margin-bottom:30px;
+
+}
+
+
+.social-box button{
+
+width:100%;
+
+padding:15px;
+
+margin:12px 0;
+
+border:none;
+
+border-radius:18px;
+
+font-size:17px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+color:white;
+
+background:linear-gradient(90deg,#00c6ff,#7c3aed);
+
+transition:.3s;
+
+}
+
+
+.social-box button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* Google Button */
+
+.social-box button:first-of-type{
+
+background:#4285F4;
+
+}
+
+
+/* Facebook Button */
+
+.social-box button:nth-of-type(2){
+
+background:#1877F2;
+
+}
+
+
+/* Guest Button */
+
+.social-box button:nth-of-type(3){
+
+background:#16a34a;
+
+}
