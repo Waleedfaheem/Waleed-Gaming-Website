@@ -1,41 +1,142 @@
-function logout() {
-    if (confirm("Are you sure you want to logout?")) {
-        window.location.href = "admin.html";
-    }
+// ==========================
+// StarRoom Dashboard
+// ==========================
+
+let coins = 10000;
+let balance = 0;
+
+const coinText = document.getElementById("coins");
+
+function updateCoins(){
+
+coinText.innerHTML = coins.toLocaleString();
+
 }
 
-document.querySelectorAll(".sidebar button").forEach(button => {
-    button.addEventListener("click", function () {
+updateCoins();
 
-        const text = this.innerText;
+// ==========================
+// Deposit Button
+// ==========================
 
-        if (text === "User Manager") {
-            alert("User Manager - Coming Soon");
-        }
+const depositBtn = document.querySelector(".deposit");
 
-        if (text === "Room Manager") {
-            alert("Room Manager - Coming Soon");
-        }
+depositBtn.addEventListener("click",()=>{
 
-        if (text === "Verification") {
-            alert("Verification Panel - Coming Soon");
-        }
+alert("Deposit System Coming Soon");
 
-        if (text === "Wallet") {
-            alert("Wallet Manager - Coming Soon");
-        }
-
-        if (text === "Gift Manager") {
-            alert("Gift Manager - Coming Soon");
-        }
-
-        if (text === "Analytics") {
-            alert("Analytics Dashboard - Coming Soon");
-        }
-
-        if (text === "Settings") {
-            alert("Settings - Coming Soon");
-        }
-
-    });
 });
+
+// ==========================
+// Withdraw Button
+// ==========================
+
+const withdrawBtn = document.querySelector(".withdraw");
+
+withdrawBtn.addEventListener("click",()=>{
+
+alert("Withdraw System Coming Soon");
+
+});
+
+// ==========================
+// Coin Shop
+// ==========================
+
+const shopBtn = document.querySelector(".shop");
+
+shopBtn.addEventListener("click",()=>{
+
+alert("Coin Shop Opening...");
+
+});
+
+// ==========================
+// Gift Button
+// ==========================
+
+const giftBtn = document.querySelector(".gift");
+
+giftBtn.addEventListener("click",()=>{
+
+alert("Gift Store Coming Soon");
+// ==========================
+// Daily Reward
+// ==========================
+
+const rewardCard = document.querySelector(".card:nth-child(2)");
+
+rewardCard.addEventListener("click", () => {
+
+coins += 500;
+
+updateCoins();
+
+alert("🎁 Daily Reward Claimed!\n+500 Coins");
+
+saveData();
+
+});
+
+// ==========================
+// Save Player Data
+// ==========================
+
+function saveData(){
+
+localStorage.setItem("starroom_coins", coins);
+
+localStorage.setItem("starroom_balance", balance);
+
+}
+
+// ==========================
+// Load Player Data
+// ==========================
+
+function loadData(){
+
+const savedCoins = localStorage.getItem("starroom_coins");
+
+const savedBalance = localStorage.getItem("
+});// ==========================
+// Bottom Navigation
+// ==========================
+
+document.querySelectorAll(".bottom-nav a").forEach(item=>{
+
+item.addEventListener("click",(e)=>{
+
+console.log("Opening:",item.innerText);
+
+});
+
+});
+
+// ==========================
+// Profile
+// ==========================
+
+function openProfile(){
+
+alert("👤 Profile Page Coming Soon");
+
+}
+
+// ==========================
+// Team
+// ==========================
+
+function openTeam(){
+
+alert("👥 Team Page Coming Soon");
+
+}
+
+// ==========================
+// Leaderboard
+// ==========================
+
+function openLeaderboard(){
+
+alert("🏆
