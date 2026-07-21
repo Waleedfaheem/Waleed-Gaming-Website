@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>StarRoom Dashboard</title>
 
 <link rel="stylesheet" href="dashboard.css">
@@ -15,124 +11,90 @@
 
 <body>
 
-<div class="dashboard">
+<div class="topbar">
 
-<div class="top-bar">
+<h2>⭐ StarRoom</h2>
 
-<h2 id="welcomeUser">Welcome</h2>
-
-<button id="logoutBtn">Logout</button>
-
-</div>
-
-<div class="profile-card">
-
-<h3 id="userName">Loading...</h3>
-
-<p>Coins</p>
-
-<h1 id="userCoins">0</h1>
-
-<p>Balance</p>
-
-<h2 id="userBalance">0</h2>
-
-</div>
-
-<div class="reward-box">
-
-<button id="dailyRewardBtn">
-
-Daily Reward (+900)
-
-</button>
-
-<button id="liveRewardBtn">
-
-Live Seat (+1200)
-
-</button>
-
-</div>
-<div class="menu-grid">
-
-<div class="menu-item">
-
-<span>💰</span>
-
-<p>Wallet</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>🎁</span>
-
-<p>Gifts</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>👥</span>
-
-<p>Friends</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>🏆</span>
-
-<p>Ranking</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>🎤</span>
-
-<p>Voice Room</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>👤</span>
-
-<p>Profile</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>⚙️</span>
-
-<p>Settings</p>
-
-</div>
-
-<div class="menu-item">
-
-<span>📨</span>
-
-<p>Messages</p>
-
+<div class="coins">
+💎 800
 </div>
 
 </div>
+
+<div class="welcome">
+
+<h1>Welcome</h1>
+
+<p>Enjoy StarRoom Live</p>
+
 </div>
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<div class="menu">
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<button>🎤 Voice Room</button>
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<button>👤 Profile</button>
 
-<script src="firebase.js"></script>
+<button>💰 Wallet</button>
+
+<button>🎁 Gifts</button>
+
+<button>🏆 Rewards</button>
+
+<button>⚙️ Settings</button>
+
+</div>
 
 <script src="dashboard.js"></script>
 
 </body>
+</html>
+<div class="balance-card">
 
+<h2>💰 Total Balance</h2>
+
+<h1>Rs. 0</h1>
+
+</div>
+
+<div class="action-buttons">
+
+<button>💵 Deposit</button>
+
+<button>🏧 Withdraw</button>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="card">🎁 Daily Reward</div>
+
+<div class="card">👥 My Team</div>
+
+<div class="card">🏆 Lucky Draw</div>
+
+<div class="card">🎤 Voice Room</div>
+
+<div class="card">💎 VIP</div>
+
+<div class="card">⚙️ Settings</div>
+
+</div>
+<footer class="bottom-menu">
+
+<button>🏠<br>Home</button>
+
+<button>🎤<br>Rooms</button>
+
+<button>🎁<br>Gifts</button>
+
+<button>💬<br>Messages</button>
+
+<button>👤<br>Profile</button>
+
+</footer>
+
+<script src="dashboard.js"></script>
+
+</body>
 </html>
