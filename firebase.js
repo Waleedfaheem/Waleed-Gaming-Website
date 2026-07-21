@@ -190,3 +190,16 @@ database.ref("users/" + uid).update(data);
 
 console.log("✅ Firebase Connected Successfully");
   }
+const firebaseConfig = {
+  apiKey: "AIzaSyB4tAhBFSuBpDXZ5UVlL2r3tCRIXdy88hA",
+  authDomain: "starroom-9269a.firebaseapp.com",
+  projectId: "starroom-9269a",
+  storageBucket: "starroom-9269a.firebasestorage.app",
+  messagingSenderId: "84736834439",
+  appId: "1:84736834439:web:41bf36daf32aa5f3607122"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.database();
