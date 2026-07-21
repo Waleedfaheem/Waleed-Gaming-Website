@@ -1,94 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>StarRoom Login</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <div class="login-box">
+
 
 <img src="assets/logo.png" class="logo">
 
+
 <h1>StarRoom</h1>
 
-<input type="email" id="email" placeholder="Enter Email">
+<p>Welcome Back</p>
 
-<input type="password" id="password" placeholder="Enter Password">
 
-<button onclick="login()">Login</button>
+<input 
+type="email" 
+id="email" 
+placeholder="Enter Email">
 
-<div class="social">
 
-<button onclick="googleSignIn()">
-<img src="assets/google.png">
-Google Login
+<input 
+type="password" 
+id="password" 
+placeholder="Enter Password">
+<button onclick="login()">
+Login
 </button>
 
-<button onclick="facebookSignIn()">
-<img src="assets/facebook.png">
-Facebook Login
-</button>
 
-</div>
-
-<p>
-Forgot Password?
-</p>
-
-<p>
-Create New Account
-</p>
-
-</div>
+<h3>OR</h3>
 
 
-<script src="firebase.js"></script>
-<script src="script.js"></script>
-
-</body>
-</html>
 <div class="social-login">
 
-    <button onclick="googleSignIn()" class="google-btn">
-        <img src="assets/google.png">
-        Continue with Google
-    </button>
+
+<button onclick="googleSignIn()" class="google-btn">
+
+<img src="assets/google.png">
+
+Continue with Google
+
+</button>
 
 
-    <button onclick="facebookSignIn()" class="facebook-btn">
-        <img src="assets/facebook.png">
-        Continue with Facebook
-    </button>
+
+<button onclick="facebookSignIn()" class="facebook-btn">
+
+<img src="assets/facebook.png">
+
+Continue with Facebook
+
+</button>
+
 
 </div>
-
-
 <div class="links">
 
-    <a href="#">Forgot Password?</a>
+<a href="#">
+Forgot Password?
+</a>
 
-    <br>
+<br><br>
 
-    <a href="register.html">
-        Create New Account
-    </a>
+<a href="register.html">
+Create New Account
+</a>
 
 </div>
 
 
 </div>
-
-</body>
-</html>
-<!-- Firebase & Script Connection -->
-
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
 
 <script src="firebase.js"></script>
@@ -97,4 +93,5 @@ Create New Account
 
 
 </body>
+
 </html>
