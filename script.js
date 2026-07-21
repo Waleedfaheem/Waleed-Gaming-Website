@@ -1,31 +1,8 @@
-// ============================
-// StarRoom Login System
-// ============================
+function login(){
 
+const email = document.getElementById("email").value;
 
-// Get Elements
-
-const emailInput = document.getElementById("email");
-
-const passwordInput = document.getElementById("password");
-
-const loginBtn = document.getElementById("loginBtn");
-
-const googleLoginBtn = document.getElementById("googleLoginBtn");
-
-const facebookLoginBtn = document.getElementById("facebookLoginBtn");
-
-
-// ============================
-// Email Password Login
-// ============================
-
-loginBtn.addEventListener("click",()=>{
-
-
-const email = emailInput.value;
-
-const password = passwordInput.value;
+const password = document.getElementById("password").value;
 
 
 if(email === "" || password === ""){
@@ -41,278 +18,160 @@ auth.signInWithEmailAndPassword(email,password)
 
 .then((userCredential)=>{
 
-
-console.log("Login Success");
+console.log("Login Successful");
 
 window.location.href="dashboard.html";
 
-
 })
+
 
 .catch((error)=>{
 
-
 alert(error.message);
 
-
 });
-
-
-});
-
-
-// ============================
-// Google Login
-// ============================
-
-googleLoginBtn.addEventListener("click",()=>{
-
-
-googleSignIn();
-
-
-});
-
-
-// ============================
-// Facebook Login
-// ============================
-
-facebookLoginBtn.addEventListener("click",()=>{
-
-
-facebookSignIn();
-
-
-});
-// ============================
-// Create User Profile
-// ============================
-
-function createUserProfile(user){
-
-
-const userData = {
-
-uid:user.uid,
-
-name:user.displayName || "StarRoom User",
-
-email:user.email,
-
-photo:user.photoURL || "assets/profile.png",
-
-coins:0,
-
-points:0,
-
-vip:"Free",
-
-createdAt:new Date().toISOString()
-
-};
-
-
-// Save User Data
-
-database.ref("users/" + user.uid)
-
-.set(userData)
-
-.then(()=>{
-
-
-console.log("Profile Created Successfully");
-
-
-});
-
 
 }
 
 
-// ============================
-// Check Login User
-// ============================
+// Google Login
+
+function googleSignIn(){
+
+auth.signInWithPopup(googleProvider)
+
+.then((result)=>{
+
+console.log("Google Login Successful");
+
+window.location.href="dashboard.html";
+
+})
+
+
+.catch((error)=>{
+
+alert(error.message);
+
+});
+
+// Facebook Login
+
+function facebookSignIn(){
+
+auth.signInWithPopup(facebookProvider)
+
+.then((result)=>{
+
+console.log("Facebook Login Successful");
+
+window.location.href="dashboard.html";
+
+})
+
+
+.catch((error)=>{
+
+alert(error.message);
+
+});
+
+}
+
+
+// Logout Function
+
+function logout(){
+
+auth.signOut()
+
+.then(()=>{
+
+window.location.href="index.html";
+
+})
+
+
+.catch((error)=>{
+
+alert(error.message);
+
+});
+
+}
+
+
+// Check User Login Status
 
 auth.onAuthStateChanged((user)=>{
 
 
 if(user){
 
-
-console.log("Active User:",user.email);
-
-
-// Create Profile If New User
-
-database.ref("users/" + user.uid)
-
-.once("value")
-
-.then((snapshot)=>{
+console.log("User Active:", user.email);
 
 
-if(!snapshot.exists()){
+}else{
 
 
-createUserProfile(user);
+console.log("No User Login");
 
 
 }
 
 
 });
+// Save User Data
 
+function saveUserData(uid, data){
 
-}
+    database.ref("users/" + uid).update(data)
 
+    .then(()=>{
 
-});
+        console.log("User Data Saved");
 
+    })
 
-// ============================
-// Loading System
-// ============================
+    .catch((error)=>{
 
-function showLoading(){
+        alert(error.message);
 
-
-const loading = document.getElementById("loadingScreen");
-
-
-if(loading){
-
-loading.style.display="flex";
+    });
 
 }
 
 
-}
 
+// Load User Data
 
-function hideLoading(){
+function loadUserData(uid){
 
+    database.ref("users/" + uid)
 
-const loading = document.getElementById("loadingScreen");
+    .once("value")
 
+    .then((snapshot)=>{
 
-if(loading){
+        if(snapshot.exists()){
 
-loading.style.display="none";
+            console.log(snapshot.val());
 
-}
+        }
 
+    })
 
-}// ============================
-// Forgot Password
-// ============================
+    .catch((error)=>{
 
-const forgotPassword = document.getElementById("forgotPassword");
+        alert(error.message);
 
-
-if(forgotPassword){
-
-
-forgotPassword.addEventListener("click",(e)=>{
-
-
-e.preventDefault();
-
-
-const email = emailInput.value;
-
-
-if(email === ""){
-
-
-alert("Enter your email first");
-
-
-return;
-
+    });
 
 }
 
 
-auth.sendPasswordResetEmail(email)
 
-.then(()=>{
-
-
-alert("Password reset email sent");
-
-
-})
-
-.catch((error)=>{
-
-
-alert(error.message);
-
-
-});
-
-
-});
-
-
-}
-
-
-// ============================
-// Register Link
-// ============================
-
-const registerLink = document.getElementById("registerLink");
-
-
-if(registerLink){
-
-
-registerLink.addEventListener("click",()=>{
-
-
-window.location.href="register.html";
-
-
-});
-
-
-}
-
-
-// ============================
-// Logout Function
-// ============================
-
-function logout(){
-
-
-auth.signOut()
-
-.then(()=>{
-
-
-window.location.href="index.html";
-
-
-})
-
-.catch((error)=>{
-
-
-alert(error.message);
-
-
-});
-
-
-}
-
-
-// ============================
-// Firebase Connected
-// ============================
+// StarRoom Ready
 
 console.log("✅ StarRoom Login System Ready");
+}
