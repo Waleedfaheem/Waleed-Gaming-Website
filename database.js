@@ -1,70 +1,158 @@
-// StarRoom Database System
+// ======================================
+// StarRoom Dashboard
+// Part 1
+// ======================================
 
+auth.onAuthStateChanged((user) => {
 
-// Save New User Data
+if (!user) {
 
-function saveUserData(uid, userData){
+window.location.href = "index.html";
 
-    database.ref("users/" + uid).set(userData)
-
-    .then(()=>{
-
-        console.log("User Data Saved");
-
-    })
-
-    .catch((error)=>{
-
-        console.log(error);
-
-    });
+return;
 
 }
 
+database.ref("users/" + user.uid).once("value")
 
+.then((snapshot) => {
 
-// Get User Data
+if (snapshot.exists()) {
 
-function getUserData(uid){
+const data = snapshot.val();
 
-    database.ref("users/" + uid).once("value")
+const name = document.getElementById("userName");
 
-    .then((snapshot)=>{
+const coins = document.getElementById("userCoins");
 
-        let data = snapshot.val();
+const balance = document.getElementById("userBalance");
 
-        console.log(data);
+if (name) name.innerHTML = data.name;
 
-    });
+if (coins) coins.innerHTML = data.coins;
 
-}
-
-
-
-// Update Coins
-
-function updateCoins(uid, coins){
-
-    database.ref("users/" + uid + "/coins").set(coins);
+if (balance) balance.innerHTML = data.balance;
 
 }
 
+});
 
+});
+// ======================================
+// StarRoom Dashboard
+// Part 2
+// ======================================
 
-// Save Room Data
+// Daily Reward
 
-function saveRoom(roomId, roomData){
+function claimDailyReward() {
 
-    database.ref("rooms/" + roomId).set(roomData);
+const user = auth.currentUser;
+
+if (!user) return;
+
+database.ref("users/" + user.uid).once("value")
+
+.then((snapshot) => {
+
+const data = snapshot.val();
+
+let coins = data.coins || 0;
+
+coins += 900;
+
+database.ref("users/" + user.uid).update({
+
+coins: coins
+
+});
+
+alert("🎁 Daily Reward Claimed (+900 Coins)");
+
+location.reload();
+
+});
 
 }
 
+// Live Seat Reward
 
+function claimLiveSeatReward() {
 
-// Save Gift Data
+const user = auth.currentUser;
 
-function saveGift(giftId, giftData){
+if (!user) return;
 
-    database.ref("gifts/" + giftId).set(giftData);
+database.ref("users/" + user.uid).once("value")
+
+.then((snapshot) => {
+
+const data = snapshot.val();
+
+let coins = data.coins || 0;
+
+coins += 1200;
+
+database.ref("users/" + user.uid).update({
+
+coins: coins
+
+});
+
+alert("🎤 Live Seat Reward Claimed (+1200 Coins)");
+
+location.reload();
+
+});
+// Reward Buttons
+
+const dailyRewardBtn = document.getElementById("dailyRewardBtn");
+
+if (dailyRewardBtn) {
+
+dailyRewardBtn.addEventListener("click", claimDailyReward);
 
 }
+
+const liveRewardBtn = document.getElementById("liveRewardBtn");
+
+if (liveRewardBtn) {
+
+liveRewardBtn.addEventListener("click", claimLiveSeatReward);
+
+}
+
+// Logout Button
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+logoutBtn.addEventListener("click", function () {
+
+logout();
+
+});
+
+}
+
+// Welcome Text
+
+auth.onAuthStateChanged((user) => {
+
+if (user) {
+
+const welcome = document.getElementById("welcomeUser");
+
+if (welcome) {
+
+welcome.innerHTML = "Welcome " + user.email;
+
+}
+
+}
+
+});
+
+console.log("Dashboard Loaded Successfully");
+    }
